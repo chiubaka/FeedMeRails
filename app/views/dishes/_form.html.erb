@@ -1,4 +1,4 @@
-<%= form_for(@dish) do |f| %>
+<%= form_for @dish, :html => { :multipart => true }  do |f| %>
   <% if @dish.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this dish from being saved:</h2>
@@ -24,6 +24,11 @@
   <div class="field">
     <%= f.label :image_url %><br />
     <%= f.url_field :image_url, :placeholder => "URL for the image of the dish" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
   </div>
 
   <div class="field">
