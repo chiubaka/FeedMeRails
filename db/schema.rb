@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721220017) do
+ActiveRecord::Schema.define(:version => 20120721224040) do
 
   create_table "customers", :force => true do |t|
     t.integer  "table_number"
@@ -61,8 +61,12 @@ ActiveRecord::Schema.define(:version => 20120721220017) do
   add_index "restaurants", ["reset_password_token"], :name => "index_restaurants_on_reset_password_token", :unique => true
 
   create_table "users", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "profile_pic_url"
+    t.integer  "facebook_id"
   end
 
 end
