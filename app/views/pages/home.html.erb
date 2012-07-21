@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+  <% if restaurant_signed_in? %>
+    Signed in as <%= current_restaurant.name %>. Not you?
+    <%= link_to "Sign out", destroy_restaurant_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_restaurant_registration_path %> or <%= link_to "sign in", new_restaurant_session_path %>
+  <% end %>
