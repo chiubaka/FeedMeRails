@@ -1,4 +1,8 @@
 FeedMeRails::Application.routes.draw do
+  get "pages/home"
+
+  devise_for :restaurants
+
   resources :ratings
 
   resources :dishes
