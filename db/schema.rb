@@ -24,8 +24,12 @@ ActiveRecord::Schema.define(:version => 20120721224040) do
 
   create_table "dishes", :force => true do |t|
     t.integer  "menu_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "name"
+    t.decimal  "price"
+    t.text     "description"
+    t.string   "image_url"
   end
 
   create_table "menus", :force => true do |t|

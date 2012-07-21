@@ -12,10 +12,28 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :menu_id %><br />
-    <%= f.number_field :menu_id %>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :placeholder => "What shall we name the delicious dish?" %>
   </div>
+
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price, :placeholder => "Price we'll charge" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.url_field :image_url, :placeholder => "URL for the image of the dish" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, :placeholder => "Describe the beauty of the dish." %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
 <% end %>
