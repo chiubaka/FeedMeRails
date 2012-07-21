@@ -35,7 +35,7 @@
     <%= f.label :description %><br />
     <%= f.text_field :description, :placeholder => "Describe the beauty of the dish." %>
   </div>
-
+  <%= hidden_field_tag :menu_id, @menu.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

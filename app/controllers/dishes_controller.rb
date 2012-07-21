@@ -25,6 +25,7 @@ class DishesController < ApplicationController
   # GET /dishes/new.json
   def new
     @dish = Dish.new
+    @menu = Menu.find(params[:menu_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +36,14 @@ class DishesController < ApplicationController
   # GET /dishes/1/edit
   def edit
     @dish = Dish.find(params[:id])
+    @menu = @dish.menu
   end
 
   # POST /dishes
   # POST /dishes.json
   def create
     @dish = Dish.new(params[:dish])
-
+    @dish.menu = Menu.find(params[:menu_id])
     respond_to do |format|
       if @dish.save
         format.html { redirect_to @dish, notice: 'Dish was successfully created.' }

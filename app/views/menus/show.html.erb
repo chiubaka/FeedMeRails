@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h2>Menu</h2>
+  <h2>Menu for <%= current_restaurant.name %></h2>
 </p>
 
 <h3>Our dishes</h3>
 
-<% if @dishes %>
-	<%= @dishes.each do |dish| %>
-		<p><%= dish.name %></p>
-		<p><%= dish.price %> </p>
-		<p><%= dish.description %></p>
-		<p><%= dish.image_url %></p>
-		<p><%= image_tag @dish.image, :id => "image" %></p>
-	<% end %>
+
+<% if @dishes.count >= 1 %>
+  <% @dishes.each do |dish| %>
+    <p><%= dish.name %></p> 
+    <p><%= dish.price %> </p>
+    <p><%= dish.description %></p>
+    <p><%= dish.image_url %></p>
+  <% end %>
+
 <% end %>
 
 
