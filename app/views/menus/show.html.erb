@@ -5,7 +5,15 @@
 </p>
 
 <h3>Our dishes</h3>
-<%= @dishes %>
+
+<% if @dishes %>
+	<%= @dishes.each do |dish| %>
+		<p><%= dish.name %></p>
+		<p><%= dish.price %> </p>
+		<p><%= dish.description %></p>
+		<p><%= image_tag("Photo", dish.image_url) %></p>
+	<% end %>
+<% end %>
 
 
 
