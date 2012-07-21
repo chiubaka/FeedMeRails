@@ -12,12 +12,11 @@
     <p><%= dish.name %></p> 
     <p><%= dish.price %> </p>
     <p><%= dish.description %></p>
-    <p><%= dish.image_url %></p>
+
+       <%= image_tag(dish.image) %>
   <% end %>
 
 <% end %>
-
-
 
 
 
