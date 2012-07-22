@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  table_number: 1
-  is_active: false
+Daniel_Chiu_Panda:
+  table_id: 1
+  is_active: true
+  restaurant: Panda_Express
+  user: Daniel_Chiu
 
 two:
-  table_number: 1
+  table_id: 1
   is_active: false
