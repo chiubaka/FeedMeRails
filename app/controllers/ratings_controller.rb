@@ -1,5 +1,5 @@
 class RatingsController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :only => :search
+  skip_before_filter :verify_authenticity_token
   # GET /ratings
   # GET /ratings.json
   def index
@@ -42,6 +42,9 @@ class RatingsController < ApplicationController
   # POST /ratings.json
   def create
     @rating = Rating.new(params[:rating])
+    facebook_id = params[:rating][:user_id]
+    @user = User.find_by_facebook_id(facebook_id)
+    @rating.user_id = @user.id
     dish = Dish.find(params[:rating][:dish_id])    
 
     respond_to do |format|

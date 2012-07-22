@@ -44,8 +44,8 @@ class OrdersController < ApplicationController
     @order = Order.new
     facebook_id = params[:user_id]
     user = User.find_by_facebook_id(facebook_id)
-    restaurant = params[:restaurant_id]
-    customer = Customer.find_by_user_id_and_restaurant_id_and_is_active(user.id, restaurant.id, true)
+    restaurant_id = params[:restaurant_id]
+    customer = Customer.find_by_user_id_and_restaurant_id_and_is_active(user.id, restaurant_id, true)
     @order.customer_id = customer.id
     dish_ids = params[:order].split(', ')
     dish_ids.each do |id|
