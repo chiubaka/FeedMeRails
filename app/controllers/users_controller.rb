@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     restaurant = Restaurant.find(params[:restaurant_id])
-    @menus = restaurant.menus
+    @menu = restaurant.menu
     table_id = params[:table_id]
 
     respond_to do |format|
