@@ -8,7 +8,6 @@ class Dish < ActiveRecord::Base
   :styles => { :small => "160x160" }
   
   def add_rating(a_rating)  
-    rating += a_rating.value
-    a_rating.dish_id = id
+    a_rating.value == 1 ? upvotes += 1 : downvotes += 1
   end
 end
