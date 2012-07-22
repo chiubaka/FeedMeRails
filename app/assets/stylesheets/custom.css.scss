@@ -1,4 +1,4 @@
-h1, h2, h3 {
+h1, h2, h3, p {
 	font-family: "Century Gothic", sans-serif; 
 }
 
@@ -42,8 +42,6 @@ h1, h2, h3 {
 
 
 
-
-
 /* Image grid */
 
 
@@ -51,6 +49,12 @@ h1, h2, h3 {
 	height: 100px;
 	width: 100px;
 }
+
+.food_image_for_menu {
+	height: 200px;
+	width: 200px;
+}
+
 
 
 ul.imggrid {
@@ -123,3 +127,62 @@ ul.imggrid {
 /* end imggrid block */
 
 /* End of image grid */
+
+/* menu */
+
+#menu {
+	position: center;
+}
+
+.menu_label {
+	font-size: 18px;
+}
+
+#menu_title {
+	padding-bottom: 40px;
+}
+
+#menu_info {
+}
+
+.menu_content {
+	font-size: 18px;
+}
+
+#dish_name {
+	
+	height: 36px;
+	background-color: #3EA1C1;
+	border-radius: 3px;
+	padding-top: 10px;
+	font-size: 42px;
+	
+	
+}
+
+.dish_form {
+	font-size: 12px;
+}
+
+#menu_buttons {
+	padding-bottom: 30px;
+	a {
+		 color: white !important;
+	}
+	
+}
+
+#edit_dish_button {
+    color: white !important;
+}
+
+
+
+/* end menu */
+
+
+
+
+
+
+

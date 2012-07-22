@@ -34,6 +34,8 @@
 				    <center><%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 					  <%= devise_error_messages! %>
 					
+					  <%= f.text_field :name, :placeholder => "Name" %>
+					
 					  <%= f.email_field :email, :placeholder => "Email" %>
 
 					  <%= f.password_field :password, :placeholder => "Password" %>
@@ -46,7 +48,7 @@
 				</div>
 
 		<li><a href="#"><img src="<%= @images[0] %>" id="col1" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[1] %>" id="col2" class="food_image" %></a></li>
+		<li><a href="#"><img src="<%= @images[0] %>" id="col2" class="food_image" %></a></li>
 		<li><a href="#"><img src="<%= @images[0] %>" id="col3" class="food_image" %></a></li>
 		<li><a href="#"><img src="<%= @images[0] %>" id="col4" class="food_image" %></a></li>
 		<li><a href="#"><img src="<%= @images[0] %>" id="col5" class="food_image" %></a></li>

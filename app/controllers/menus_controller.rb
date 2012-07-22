@@ -15,6 +15,14 @@ class MenusController < ApplicationController
   def show
     @menu = Menu.find(params[:id])
     @dishes = @menu.dishes
+    
+    @images = []
+    
+    @menu.dishes.each do |dish|
+	        @images << dish.image
+	  end
+	
+    
 
     respond_to do |format|
       format.html # show.html.erb

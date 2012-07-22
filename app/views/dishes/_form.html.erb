@@ -12,25 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, :placeholder => "What shall we name the delicious dish?" %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :placeholder => "Name of the treat", :class => "dish_form" %>
   </div>
 
   <div class="field">
-    <%= f.label :price %><br />
-    <%= f.number_field :price, :placeholder => "Price we'll charge" %>
+    <%= f.label :price %>
+    <%= f.number_field :price, :placeholder => "Price we'll charge", :class => "dish_form" %>
   </div>
 
   <div class="field">
-    <%= f.label :image %><br />
+    <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
 
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description, :placeholder => "Describe the beauty of the dish." %>
+    <%= f.label :description %>
+    <%= f.text_field :description, :placeholder => "Describe the beauty of the dish.", :class => "dish_form" %>
   </div>
-  Menu ID: <%= @menu.id %>
+
   <%= hidden_field_tag :menu_id, @menu.id %>
   <div class="actions">
     <%= f.submit %>
