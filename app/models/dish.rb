@@ -1,5 +1,5 @@
 class Dish < ActiveRecord::Base
-  attr_accessible :menu_id, :name, :price, :description, :image, :rating, :upvotes, :downvotes
+  attr_accessible :menu_id, :name, :price, :description, :image, :rating, :upvotes, :downvotes, :order_id
   
   belongs_to :menu
   belongs_to :order
