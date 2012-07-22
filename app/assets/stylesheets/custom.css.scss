@@ -1,3 +1,119 @@
 h1, h2, h3 {
 	font-family: "Century Gothic", sans-serif; 
 }
+
+.home_container {
+	padding-top: 50px;
+}
+
+/* Homebox */
+
+#homebox {
+	width: 380px;
+	height: 350px;
+	background-color: Ç;
+	position: absolute;
+    margin: auto; 	
+    left: 491px;
+    top: 100px;
+    border-radius: 10px;
+}
+
+/* Homebox end */
+
+#tagline {
+	font-size: 28px;
+	line-height: 25px;
+	padding-bottom: 10px;
+	color: white;
+	font-family: "Century Gothic", sans-serif; 
+}
+
+#home_page_registration {
+	padding-top: 80px;
+	padding-left: 50px;
+}
+
+
+
+
+
+/* Image grid */
+
+
+.food_image {
+	height: 100px;
+	width: 100px;
+}
+
+
+ul.imggrid {
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  width: 1100px; /*495*/
+  height: 550px;
+  }
+
+.imggrid li {
+    float: left;
+    padding: 0px; /* 1 */
+    border: 0px solid #cbcad0; /*1 */
+    /* margin: 0 5px 10px 5px; */
+    } 
+
+.imggrid_display {
+   padding: 0px;
+   margin: 0 auto;
+   width: 1100px; 
+   /*these two properties will be inherited by .portfolio h2 and .portfolio p */
+   font-family: 'GraublauWeb', arial, serif; 
+   /* text-align: center; */
+  }
+  
+  /* .post-body is only for those who are on Blogger, or all others please skip 
+     it and write your selector as "div.imggrid_display h2" without the quotes
+  */
+  .post-body div.imggrid_display h2 {
+     padding: 0; margin: 0;
+     clear: both;
+     font-size: 35px;
+     font-weight: normal;
+     color: #58595b;
+     background: none;
+     font-family: 'GraublauWeb', arial, serif;  
+     /* reset for cascade effects that are trickling down to me 
+       from other h2's 
+    */
+     text-transform: none;
+     letter-spacing: normal;
+     }
+  
+  .imggrid_display p {
+      margin:0; padding: 0;
+      font-size: 15px;
+      color: #58595b;
+      }
+  
+/* sprites for imggrid */
+.imggrid a {
+    background: url('images/spritebitmaps.jpg') no-repeat;
+    height: 100px;
+    width: 100px;
+    display: block;
+    }
+
+/*sprites*/
+.imggrid a#col1 {background-position: 0 0;}
+.imggrid a#col2 {background-position:  -150px 0;}
+.imggrid a#col3 {background-position: -300px 0;}
+.imggrid a#col4 {background-position:  -450px 0;}
+.imggrid a#col5 {background-position:  -600px 0;}
+.imggrid a#col6 {background-position:  -750px 0;}
+.imggrid a#col7 {background-position:  -900px 0;}
+.imggrid a#col8 {background-position:  -1050px 0;}
+.imggrid a#col9 {background-position:  -1200px 0;}
+/* end sprites for imggrid */
+/* end imggrid block */
+
+/* End of image grid */
