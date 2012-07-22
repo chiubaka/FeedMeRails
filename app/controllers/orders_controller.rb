@@ -43,7 +43,9 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new
     user_id = params[:user_id]
-    dish_ids = params[:order].split(', ').gsub(/^[]/, "")
+    restaurant = params[:restaurant_id]
+    @order.customer_id = Customer.find_by_user_id_and_restaurant_id_and_is_active(user_id, restaurant.id, true).id
+    dish_ids = params[:order].split(', ')
     dish_ids.each do |id|
       dish = Dish.find(id.to_i)
       dish.order_id = @order.id
