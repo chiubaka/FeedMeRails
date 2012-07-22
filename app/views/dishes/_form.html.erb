@@ -30,6 +30,8 @@
     <%= f.label :description %>
     <%= f.text_field :description, :placeholder => "Simply the best", :class => "dish_form" %>
   </div>
+  
+  <%= hidden_field_tag :menu_id, @menu.id %>
 
   <div class="actions">
     <%= f.submit "Add dish", class: "btn btn-large btn-primary" %>
