@@ -41,14 +41,23 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+    if User.find_by_facebook_id(params[:user][:facebook_id])
+      @user = User.new(params[:user])
+      @user.profile_pic_url = "#http://graph.facebook.com/{params[:user][:facebook_id]}/picture?type=square"
+    else
+      @user = User.find_by_facebook_id(params[:user][:facebook_id])
+      @user.first_name = params[:user][:first_name]
+      @user.last_name = params[:user][:last_name]
+    end
+
     restaurant = Restaurant.find(params[:restaurant_id])
     menu = restaurant.menu
     @dishes = menu.dishes
     table_id = params[:table_id]
-
+    
     respond_to do |format|
       if @user.save
+        Customer.create(user_id: @user.id, restaurant_id: restaurant.id, table_id: table_id, is_active: true)
         format.html { redirect_to @user }
         format.json { render json: @dishes }
       else
