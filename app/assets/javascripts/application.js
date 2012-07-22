@@ -26,3 +26,9 @@ function updateCustomers() {
   $.getScript("/customers.js?restaurant_id=" + restaurant_id );
   setTimeout(updateCustomers, 5000);
 }
+
+$(".red").click(function() {
+  var customer_id = $(this).attr("customer-id");
+  $(this).removeClass("red");
+  $.getScript("/customers/" + customer_id + ".js");
+});
