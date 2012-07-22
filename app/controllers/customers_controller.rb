@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   # GET /customers
   # GET /customers.json
   def index
@@ -82,4 +83,11 @@ class CustomersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def waiter
+    facebook_id = params[:user_id]
+    user = User.find_by_facebook_id(facebook_id)
+    restaurant_id = params[:restaurant_id]
+    @customer = Customer.find_by_user_id_and_restaurant_id_and_is_active(user.id, restaurant_id, true)
+    @customer.is_flagged = true
 end
