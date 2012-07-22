@@ -42,12 +42,14 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
-    logger.debug "User variables #{params[:user]}"
+    restaurant = Restaurant.find(params[:restaurant_id])
+    @menus = restaurant.menus
+    table_id = params[:table_id]
 
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user }
-        format.json { render json: @user, status: :created, location: @user }
+        format.json { render json: @menus.to_json(:include => {:dishes => {:include => :ratings}}) }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
