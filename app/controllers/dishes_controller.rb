@@ -46,7 +46,7 @@ class DishesController < ApplicationController
     @dish.menu = Menu.find(params[:menu_id])
     respond_to do |format|
       if @dish.save
-        format.html { redirect_to @dish, notice: 'Dish was successfully created.' }
+        format.html { redirect_to @dish.menu, notice: 'Dish was successfully created.' }
         format.json { render json: @dish, status: :created, location: @dish }
       else
         format.html { render action: "new" }
@@ -59,10 +59,10 @@ class DishesController < ApplicationController
   # PUT /dishes/1.json
   def update
     @dish = Dish.find(params[:id])
-
+    @menu = @dish.menu
     respond_to do |format|
       if @dish.update_attributes(params[:dish])
-        format.html { redirect_to @dish, notice: 'Dish was successfully updated.' }
+        format.html { redirect_to @menu, notice: 'Dish was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
