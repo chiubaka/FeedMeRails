@@ -5,12 +5,17 @@
   width:50em;
 }
 
-.customers_header {
- font-size:1.8em;
+#customers_header {
+  font-size:1.8em;
 }
 
-.customers_header div, .customers_entry div {
+#customers_header .customers_entry {
   display:inline;
+  float:left;
+  clear:both;
+}
+
+.table_id, .customer_info, .check_off {
   float:left;
 }
 
