@@ -42,9 +42,11 @@ class RatingsController < ApplicationController
   # POST /ratings.json
   def create
     @rating = Rating.new(params[:rating])
+    dish = Dish.find(params[:rating][:dish_id])    
 
     respond_to do |format|
       if @rating.save
+        dish.add_rating(@rating)
         format.html { redirect_to @rating, notice: 'Rating was successfully created.' }
         format.json { render json: @rating, status: :created, location: @rating }
       else
