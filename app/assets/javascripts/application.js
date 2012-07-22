@@ -13,6 +13,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree
+
 $(document.ready(function() {
   if ($("#customers").length > 0) {
     setTimeout(updateCustomers, 5000);
