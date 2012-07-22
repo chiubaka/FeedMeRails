@@ -41,9 +41,9 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    if User.find_by_facebook_id(params[:user][:facebook_id])
+    unless User.find_by_facebook_id(params[:user][:facebook_id])
       @user = User.new(params[:user])
-      @user.profile_pic_url = "#http://graph.facebook.com/{params[:user][:facebook_id]}/picture?type=square"
+      @user.profile_pic_url = "http://graph.facebook.com/#{params[:user][:facebook_id]}/picture?type=square"
     else
       @user = User.find_by_facebook_id(params[:user][:facebook_id])
       @user.first_name = params[:user][:first_name]
