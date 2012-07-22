@@ -23,72 +23,22 @@
 
 
 <div class="container">
-	<div class="row">
-		<div class="span12">
 			<div class="imggrid_display">
-				<ul class="imggrid">
-					<div id="homebox" class="span4">
+<div id="homebox_wrapper">
+					<div id="homebox">
 						<div id="home_page_registration">
 					        <center><p id="tagline">The seamless restaurant experience.</p></center>
 						    <center><%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 							  <%= devise_error_messages! %>
-							  <%= f.text_field :name, :placeholder => "Name" %>
+							  <%= f.text_field :name, :placeholder => "Business Name" %>
 							  <%= f.email_field :email, :placeholder => "Email" %>
 							  <%= f.password_field :password, :placeholder => "Password" %>
 							  <div><%= f.submit "Sign up", :class => "btn btn-large btn-primary" %></div>
 							<% end %></center>
 						</div>
 					</div>
-					<li><a href="#"><%= image_tag("tofu.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("1.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("2.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("3.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("4.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("5.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("6.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("7.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("8.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("9.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("10.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("11.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("12.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("13.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("14.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("15.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("16.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("17.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("18.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("19.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("20.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("21.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("22.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("23.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("24.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("25.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("26.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("27.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("28.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("29.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("30.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("31.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("32.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("33.jpeg", :class => "food_image")%></a></li>
-					<li><a href="#"><%= image_tag("34.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("35.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("36.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("37.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("38.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("39.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("40.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("41.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("42.jpeg", :class => "food_image") %></a></li>
-					<li><a href="#"><%= image_tag("43.jpeg", :class => "food_image") %></a></li>
-				
-			
-				</ul>
+</div>
 			</div>
-        </div>
-    </div>
 </div>
 
 

@@ -15,7 +15,7 @@
  
       <!-- Site name -->
       <% if current_restaurant %><%= link_to "Feed.me", menu_path(current_restaurant.menu.id), :class => "brand" %>
-      <% else %> <%= link_to "Feed Me :)", root_path, :class => "brand" %>
+      <% else %> <%= link_to "Feed.me", root_path, :class => "brand" %>
       <% end %>
  
       <!-- Start of the nav bar content -->
