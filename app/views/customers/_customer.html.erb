@@ -1,4 +1,4 @@
-<td customer-id="<%= customer.id %>" class="customer_entry <%= 'red' if customer.is_flagged %> ">
+<tr customer-id="<%= customer.id %>" class="customer_entry <%= 'red' if customer.is_flagged %> ">
   <td class="table_id"><%= customer.table_id%></td>
   <td class="customer_info"><%= image_tag customer.user.profile_pic_url %><%= "#{customer.user.first_name} #{customer.user.last_name}" %></td>
   <td class="check_off"><%= link_to "Done", customer_path(customer.id), method: :delete %></td>
