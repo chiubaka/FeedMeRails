@@ -15,8 +15,7 @@
 
 <body class="home_page_body">
 <% if restaurant_signed_in? %>
-    Signed in as <%= current_restaurant.name %>. Not you?
-    <%= link_to "Sign out", destroy_restaurant_session_path, :method => :delete %>
+  
 <% else %>
 
 

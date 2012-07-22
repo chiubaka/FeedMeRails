@@ -35,7 +35,9 @@
             <a class="dropdown-toggle" href="#" data-toggle="dropdown">
 	          User <strong class="caret"></strong></a>
             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-              	will show stuff here
+              	
+<%= link_to "Edit profile", edit_restaurant_path(current_restaurant), :class => "btn btn-large btn-primary", :id => "sign_out_button" %>
+<%= link_to "Sign out", destroy_restaurant_session_path, :method => :delete, :class => "btn btn-large btn-primary", :id => "sign_out_button" %>
             </div>
           </li>
           <% end %>

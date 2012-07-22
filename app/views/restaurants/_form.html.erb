@@ -12,10 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Update my profile", :class => "btn btn-large btn-primary" %>
   </div>
 <% end %>
