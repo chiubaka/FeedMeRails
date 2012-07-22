@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name, :placeholder => "Name of the treat", :class => "dish_form" %>
+    <%= f.text_field :name, :placeholder => "Chocolate burger", :class => "dish_form" %>
   </div>
 
   <div class="field">
@@ -31,9 +31,8 @@
     <%= f.text_field :description, :placeholder => "Describe the beauty of the dish.", :class => "dish_form" %>
   </div>
 
-  <%= hidden_field_tag :menu_id, @menu.id %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add dish", class: "btn btn-large btn-primary" %>
   </div>
 
 
