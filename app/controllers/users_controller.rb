@@ -57,12 +57,14 @@ class UsersController < ApplicationController
     
     respond_to do |format|
       if @user.save
-        customer = Customer.new
-        customer.is_active = true
-        customer.restaurant_id = restaurant.id
-        customer.table_id = table_id
-        customer.user_id = @user.id
-        customer.save
+        unless Customer.find_by_user_id_and_restaurant_id_and_is_active(@user.id, restaurant.id, true)
+          customer = Customer.new
+          customer.is_active = true
+          customer.restaurant_id = restaurant.id
+          customer.table_id = table_id
+          customer.user_id = @user.id
+          customer.save
+        end
         format.html { redirect_to @user }
         format.json { render json: @dishes }
       else

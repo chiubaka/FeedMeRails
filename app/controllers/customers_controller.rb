@@ -75,6 +75,7 @@ class CustomersController < ApplicationController
   def destroy
     @customer = Customer.find(params[:id])
     @customer.is_active = false
+    @customer.save
 
     respond_to do |format|
       format.html { redirect_to customers_url }

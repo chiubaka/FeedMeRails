@@ -1,11 +1,6 @@
+<center><h1 id="menu_title"><%= current_restaurant.name %>'s customers</h1></center>
 
-<div class="row">
-	<div class="span8">
-		<center><h1 id="menu_title"><%= current_restaurant.name %>'s customers</h1></center>
-	</div>
-</div>
-
-
+<div id="customers_container">
 <% if @customers %>
   <div id="customers_header">
     <div class="table_id">Table</div>
@@ -16,5 +11,5 @@
       <%= render @customers %>
   </div>
 <% end %>
-
+</div>
 
