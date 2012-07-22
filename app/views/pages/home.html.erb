@@ -1,23 +1,23 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
   <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
 
+  
+	<script>
+	$(document).ready(function()
+	{
+	  //Handles menu drop down
+	  $('.dropdown-menu').find('form').click(function (e) {
+	        e.stopPropagation();
+	        });
+	  });
+	</script>
 
 
+<body class="home_page_body">
 <% if restaurant_signed_in? %>
     Signed in as <%= current_restaurant.name %>. Not you?
     <%= link_to "Sign out", destroy_restaurant_session_path, :method => :delete %>
 <% else %>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="container">
@@ -25,11 +25,7 @@
 		<div class="span12">
 	
 	<div class="imggrid_display">
-	
-		
 		<ul class="imggrid">
-			
-			
 				<div id="homebox">
 					<div id="home_page_registration">
 					
@@ -47,11 +43,10 @@
 					<% end %></center>
 					
 					</div>
-
 				</div>
 
 		<li><a href="#"><img src="<%= @images[0] %>" id="col1" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col2" class="food_image" %></a></li>
+		<li><a href="#"><img src="<%= @images[1] %>" id="col2" class="food_image" %></a></li>
 		<li><a href="#"><img src="<%= @images[0] %>" id="col3" class="food_image" %></a></li>
 		<li><a href="#"><img src="<%= @images[0] %>" id="col4" class="food_image" %></a></li>
 		<li><a href="#"><img src="<%= @images[0] %>" id="col5" class="food_image" %></a></li>
@@ -102,12 +97,37 @@
 </div>
 
 
-
-    
-
+<div class="home_page_info">
+	<div class="container">
+	<div class="row">
+		<div class="span4">
+			<h2>Check in</h2>
+			<p>
+				Your customers check in with their phones thanks to the NFC tag at their table.
+				This instantaneously notifies you of their arrival, and table number. 
+			</p>
+		</div>
+		<div class="span4">
+			<h2>Order </h2>
+			<p>
+				Customers have access to your menu, see the crowd-sourced ratings of all your dishes, and order through their phones. 
+				Feed.me also allows your customers to filter food based on type, and potential allergies.
+			</p>
+		</div>
+		<div class="span4">
+			<h2>Review</h2>
+			<p>
+				Customers finally vote on their favorite dishes, leave reviews, and share their wonderful experience through Foursquare and Facebook.
+			</p>
+		</div>
+		
+	</div>
+	</div>
+</div>
 
 <% end %>
 
+</body>
 
 
 
@@ -116,12 +136,3 @@
 
 
 
-<script>
-$(document).ready(function()
-{
-  //Handles menu drop down
-  $('.dropdown-menu').find('form').click(function (e) {
-        e.stopPropagation();
-        });
-  });
-</script>
