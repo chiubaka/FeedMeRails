@@ -10,7 +10,7 @@
   <% @customers.each do |customer| %>
   <div class="row">
 	<div class="span8" id="menu_info">
-    	<div><center><p class="menu_content" id="name_of_dish"><%= customer.user.name %></p></center></div>   
+    	<div><center><p class="menu_content" id="name_of_dish"><%= customer.user.first_name %> <%= customer.user.last_name %></p></center></div>   
     </div>
   </div>
   <div class="row">
