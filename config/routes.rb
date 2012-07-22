@@ -21,7 +21,7 @@ FeedMeRails::Application.routes.draw do
 
   resources :users
 
-  match 'waiter' => 'customer#waiter'  
+  match 'waiter.json', :controller => 'customer', :action => 'waiter', :format => 'json' 
 
   root to: "pages#home" 
   # The priority is based upon order of creation:
