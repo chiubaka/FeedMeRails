@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721232040) do
+ActiveRecord::Schema.define(:version => 20120722031254) do
 
   create_table "customers", :force => true do |t|
     t.integer  "table_number"
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(:version => 20120721232040) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "profile_pic_url"
-    t.integer  "facebook_id"
+    t.string   "facebook_id"
   end
 
 end
