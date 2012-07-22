@@ -59,9 +59,10 @@ class CustomersController < ApplicationController
   # PUT /customers/1.json
   def update
     @customer = Customer.find(params[:id])
-
     respond_to do |format|
       if @customer.update_attributes(params[:customer])
+        @customer.is_flagged = false;
+        @customer.save
         format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
         format.json { head :no_content }
       else
