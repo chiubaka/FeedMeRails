@@ -1,33 +1,3 @@
 // Place all the styles related to the customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#customers_container {
-  width:55em;
-  margin: 0 auto;
-}
-
-#customers_header {
-  font-size:1.8em;
-}
-
-#customers_header .customers_entry {
-  display:inline;
-  float:left;
-  clear:both;
-}
-
-.table_id, .customer_info, .check_off {
-  float:left;
-}
-
-.table_id {
-  width:10em;
-}
-
-.customer_info {
-  width: 20em;
-}
-
-.check_off {
-  width:10em;
-}

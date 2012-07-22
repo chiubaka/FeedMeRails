@@ -1,15 +1,13 @@
 <center><h1 id="menu_title"><%= current_restaurant.name %>'s customers</h1></center>
 
-<div id="customers_container">
 <% if @customers %>
-  <div id="customers_header">
-    <div class="table_id">Table</div>
-    <div class="customer_info">Customer</div>
-    <div class="check_off"></div>
-  </div>
-  <div id="customers" data-id="<%= @current_restaurant.id %>">
-      <%= render @customers %>
-  </div>
+<table id="customers" data-id="<%= @current_restaurant.id %>">
+  <tr>  
+    <th>Table</th>
+    <th>Customer</th>
+    <th>Check Off</th>
+  </tr>
+  <%= render @customers %>
+</table>
 <% end %>
-</div>
 

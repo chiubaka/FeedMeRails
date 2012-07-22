@@ -1,5 +1,43 @@
+#customers {
+  width:40em;
+  margin:0 auto;
+  background-image: url(https://d2h0j0bhq7ad3b.cloudfront.net/assets/paper-texture-78e81f14f426b1043da12ae2e3894487.jpg);
+}
+
+#customers {
+  border-radius:3px;
+  font-size:1.8em;
+}
+
+#customers th {
+  margin:0;
+  padding-left:1.5em;
+  text-align:left;
+  height:4em;
+}
+
+#customers td, th {
+  height:5em;
+  padding-left:1.5em;
+  font-size:20px;
+}
+
+#customers .table_id {
+  width:3em;
+}
+
+#customers .customer_info img {
+  margin-right:20px;
+}
+
+#customers .even {
+  background-image: none;
+  background-color: #FFFFFF;
+}
+
 body, html, h1, h2, h3, p {
 	font-family: "MuseoSans-500", arial, sans-serif; 
+        background-image: url(https://d2h0j0bhq7ad3b.cloudfront.net/assets/blue-texture-bg-14497b31ee691423f56abcca34839ede.jpg);
 }
 
 h1, h2, h3 {
