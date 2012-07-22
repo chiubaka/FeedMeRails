@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new
     user_id = params[:user_id]
-    dish_ids = params[:order].split(', ').gsub(/^[]/, "")
+    dish_ids = params[:order].split(', ')
     dish_ids.each do |id|
       dish = Dish.find(id.to_i)
       dish.order_id = @order.id
