@@ -2,7 +2,7 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.find_by_restaurant_id_and_is_active(current_restaurant.id, true)
+    @customers = Customer.find_all_by_restaurant_id_and_is_active(current_restaurant.id, true)
 
     respond_to do |format|
       format.html # index.html.erb
