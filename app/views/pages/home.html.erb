@@ -11,6 +11,8 @@
 	        });
 	  });
 	</script>
+	
+
 
 
 <body class="home_page_body">
@@ -125,6 +127,30 @@
 	</div>
 	</div>
 </div>
+
+<!-- Home Page carousel -->
+<!-- End of home page carousel -->
+
+<div id="carousel_container">
+
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
+    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
+    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+</div>
+
+
+
+
+
 
 <% end %>
 
