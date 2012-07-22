@@ -1,27 +1,38 @@
 <p id="notice"><%= notice %></p>
 
+
+<div id="menu">
 <p>
-  <h2>Menu for <%= current_restaurant.name %></h2>
+  <center><h2 id="menu_title"><%= current_restaurant.name %>'s menu</h2></center>
 </p>
 
-<h3>Our dishes</h3>
-
+<div id="menu_buttons"><%= link_to "Add a dish", new_dish_path(menu_id: @menu.id), :class => "btn btn-large btn-primary" %></div>
 
 <% if @dishes.count >= 1 %>
   <% @dishes.each do |dish| %>
-    <p><%= dish.name %></p> 
-    <p><%= dish.price %> </p>
-    <p><%= dish.description %></p>
+  <div class="row">
+	<div class="span6" id="menu_info">
+    	<div class="menu_label"> <center><p class="menu_content" id="dish_name"><%= dish.name %></p></center></div>   
+    </div>
+  </div>
+  <div class="row">
+	<div class="span3">
+		<p class="menu_content"><%= number_to_currency(dish.price) %></p>
+	    <p class="menu_content"><%= dish.description %></p>
+	    <p class="menu_content"><%= dish.ratings unless dish.ratings.empty? %></p>
+	    <%= link_to("Edit dish", edit_dish_path(dish), :class => "btn btn-large btn-primary", :id => "edit_dish_button") %>
+	</div>
+	<div class="span3">
+	    <p><a href="#"><img src="<%= dish.image %>" class="food_image_for_menu" %></a></p>
+	</div>
+  </div>
 
-       <%= image_tag(dish.image) %>
   <% end %>
 
 <% end %>
 
 
+</div>
 
-<h3><%= link_to "Add a dish", new_dish_path(menu_id: @menu.id) %></h3>
 
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
