@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :create
   # GET /users
   # GET /users.json
   def index
@@ -44,7 +45,6 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
