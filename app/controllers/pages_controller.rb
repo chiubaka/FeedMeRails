@@ -8,6 +8,11 @@ class PagesController < ApplicationController
 	        @images << dish.image
 	    end
 	  end 
-
+	  
+	  
+	  if restaurant_signed_in?
+      redirect_to menu_path(current_restaurant.menu.id)
+	  end
+	      
   end
 end

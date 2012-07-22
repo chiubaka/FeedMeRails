@@ -24,84 +24,72 @@
 <div class="container">
 	<div class="row">
 		<div class="span12">
-	
-	<div class="imggrid_display">
-		<ul class="imggrid">
-				<div id="homebox">
-					<div id="home_page_registration">
-					
-					<center><p id="tagline">The ultimate restaurant experience.</p></center>
-					
-				    <center><%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-					  <%= devise_error_messages! %>
-					
-					  <%= f.text_field :name, :placeholder => "Name" %>
-					
-					  <%= f.email_field :email, :placeholder => "Email" %>
-
-					  <%= f.password_field :password, :placeholder => "Password" %>
-
-					  <div><%= f.submit "Sign up", :class => "btn btn-large btn-primary" %></div>
-
-					<% end %></center>
-					
+			<div class="imggrid_display">
+				<ul class="imggrid">
+					<div id="homebox" class="span4">
+						<div id="home_page_registration">
+					        <center><p id="tagline">The ultimate restaurant experience.</p></center>
+						    <center><%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+							  <%= devise_error_messages! %>
+							  <%= f.text_field :name, :placeholder => "Name" %>
+							  <%= f.email_field :email, :placeholder => "Email" %>
+							  <%= f.password_field :password, :placeholder => "Password" %>
+							  <div><%= f.submit "Sign up", :class => "btn btn-large btn-primary" %></div>
+							<% end %></center>
+						</div>
 					</div>
-				</div>
-
-		<li><a href="#"><img src="<%= @images[0] %>" id="col1" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col2" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col3" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col4" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col5" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col6" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col7" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col8" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col9" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col10" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col11" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col12" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col13" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col14" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col15" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col16" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col17" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col18" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col19" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col20" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col21" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col22" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col23" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col24" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col25" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col26" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col27" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col28" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col29" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col30" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col31" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col32" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col33" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col34" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col35" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col36" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col37" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col38" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col39" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col40" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col41" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col42" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col43" class="food_image" %></a></li>
-		<li><a href="#"><img src="<%= @images[0] %>" id="col44" class="food_image" %></a></li>
-		</ul>
-	</div>
-
-</div>
-</div>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col1" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col2" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col3" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col4" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col5" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col6" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col7" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col8" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col9" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col10" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col11" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col12" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col13" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col14" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col15" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col16" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col17" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col18" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col19" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col20" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col21" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col22" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col23" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col24" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col25" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col26" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col27" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col28" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col29" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col30" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col31" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col32" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col33" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col34" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col35" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col36" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col37" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col38" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col39" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col40" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col41" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col42" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col43" class="food_image" %></a></li>
+					<li><a href="#"><img src="<%= @images[0] %>" id="col44" class="food_image" %></a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
 </div>
 
 
 <div class="home_page_info">
-	<div class="container">
 	<div class="row">
 		<div class="span4">
 			<h2>Check in</h2>
@@ -123,31 +111,30 @@
 				Customers finally vote on their favorite dishes, leave reviews, and share their wonderful experience through Foursquare and Facebook.
 			</p>
 		</div>
-		
-	</div>
 	</div>
 </div>
 
 <!-- Home Page carousel -->
 <!-- End of home page carousel -->
 
-<div id="carousel_container">
-
-<div id="myCarousel" class="carousel slide">
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
-    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
-    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+<div class="row">
+	<div class="span3">
+		<p></p>
+	</div>
+	<div class="span6">
+    	<div id="myCarousel" class="carousel slide">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+		    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
+		    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
+		    <div class="item"><%= link_to image_tag("app_1.jpeg"), :class => "home_page_carousel_image" %> </div>
+		  </div>
+		  <!-- Carousel nav -->
+		  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+    </div>
 </div>
-
-</div>
-
-
 
 
 
