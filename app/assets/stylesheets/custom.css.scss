@@ -63,8 +63,8 @@ h1, h2, h3 {
 	height: 350px;
 	background-color: Ç;
 	position: absolute;
-    margin: auto; 	
-    left: 491px;
+    margin-left: -190px; 	
+    left: 50%;
     top: 100px;
     border-radius: 10px;
 }
@@ -261,14 +261,6 @@ ul.imggrid {
 #carousel_container {
 	padding-bottom: 40px;
 }
-
-/* carousel */
-
-#new_dish_form {
-	width: 300px;	
-}
-
-
 
 
 
