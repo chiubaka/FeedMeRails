@@ -26,3 +26,4 @@ function updateCustomers() {
   $.getScript("/customers.js?restaurant_id=" + restaurant_id );
   setTimeout(updateCustomers, 5000);
 }
+
