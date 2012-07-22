@@ -1,21 +1,19 @@
-<h3>Join the party</h3>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %>
-  <%= f.email_field :email %></div>
+  <%= f.email_field :email, :placeholder => "Email" %>
 
-  <div><%= f.label :password %>
-  <%= f.password_field :password %></div>
+  <%= f.password_field :password, :placeholder => "Password" %>
 
-  <div><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %></div>
+  <%= f.password_field :password_confirmation, :placeholder => "Confirm password" %>
   
   <div><%= f.label :name %>
   <%= f.text_field :name %></div>
 
   <div><%= f.submit "Sign up", :class => "btn btn-large btn-primary" %></div>
+
 <% end %>
+
 
 
