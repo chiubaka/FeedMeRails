@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #customers_container {
-  width:50em;
+  width:55em;
+  margin: 0 auto;
 }
 
 #customers_header {
@@ -20,13 +21,13 @@
 }
 
 .table_id {
-  width:10%;
+  width:10em;
 }
 
 .customer_info {
-  width: 80%;
+  width: 20em;
 }
 
 .check_off {
-  width:10%;
+  width:10em;
 }
