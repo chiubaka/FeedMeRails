@@ -1,4 +1,6 @@
 FeedMeRails::Application.routes.draw do
+  resources :orders
+
   get "pages/home"
 
   devise_for :restaurants
