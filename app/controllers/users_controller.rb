@@ -49,7 +49,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user }
-        format.json { render json: @menu.to_json(:include => {:dish => {:include => :rating}}) }
+        format.json { render json: @menu }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
