@@ -42,10 +42,11 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
+    logger.error "#{params[:user])}"
 
     respond_to do |format|
       if @user.save
-        format.json { render json: params[:user].to_json }
+        format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
         format.json { render json: @user.errors, status: :unprocessable_entity }
