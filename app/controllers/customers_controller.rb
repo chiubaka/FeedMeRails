@@ -6,6 +6,7 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.json { render json: @customers }
     end
   end
@@ -73,7 +74,7 @@ class CustomersController < ApplicationController
   # DELETE /customers/1.json
   def destroy
     @customer = Customer.find(params[:id])
-    @customer.destroy
+    @customer.is_active = false
 
     respond_to do |format|
       format.html { redirect_to customers_url }

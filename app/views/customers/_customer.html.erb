@@ -1,0 +1,5 @@
+<div class="customer_entry">
+  <div class="table_id">customer.table_id</div>
+  <div class="customer_info"><%= image_tag customer.user.image %><%= "#{customer.user.first_name} #{customer.user.last_name} %></div>
+  <div class="check_off"><%= link_to "Done!", delete_customer_path(customer) %></div>
+</div>

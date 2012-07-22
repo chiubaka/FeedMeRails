@@ -15,7 +15,7 @@ class MenusController < ApplicationController
   def show
     @menu = Menu.find(params[:id])
     @dishes = @menu.dishes
-    
+    @dish = Dish.new
     @images = []
     
     @menu.dishes.each do |dish|

@@ -7,23 +7,14 @@
 
 
 <% if @customers %>
-  <% @customers.each do |customer| %>
-  <div class="row">
-	<div class="span8" id="menu_info">
-    	<div><center><p class="menu_content" id="name_of_dish"><%= customer.user.first_name %> <%= customer.user.last_name %></p></center></div>   
-    </div>
+  <div id="customers_header">
+    <div class="table_id">Table</div>
+    <div class="customer_info">Customer</div>
+    <div class="check_off"></div>
   </div>
-  <div class="row">
-	<div class="span4">
-	    <p><a href="#"><img src="<%= customer.user.profile_pic_url %>" class="food_image_for_menu" %></a></p> <!-- menu classes work here -->
-	</div>
-	<div class="span4">
-		<p class="menu_content"><%= customer.table_id %></p>   
-	</div>
+  <div id="customers" data-id="<%= @current_restaurant.id %>">
+      <%= render @customers %>
   </div>
-
-  <% end %>
-
 <% end %>
 
 

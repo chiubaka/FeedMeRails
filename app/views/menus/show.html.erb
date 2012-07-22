@@ -3,13 +3,18 @@
 <div id="menu">
 
 <div id="menu_buttons">
-	<div class="row">
-		<div class="span10">
+  <div class="row">
+    <div class="span10">
 	<center><h1 id="menu_title"><%= current_restaurant.name %>'s menu</h1></center>
 	
 
-	
-	<%= link_to "Add a dish", new_dish_path(menu_id: @menu.id), :class => "btn btn-large btn-primary" %></div></div></div>
+      <li style="list-style:none;margin-bottom:3em" class="dropdown" id="menu1">
+    <a class="btn btn-large btn-primary" data-toggle="dropdown" href="#menu1">Add a dish</a>
+
+    <ul class="dropdown-menu">
+      <li><%= render partial: "dishes/form" %></li>
+    </ul>
+  </li>
 
 <% if @dishes.count >= 1 %>
   <% @dishes.each do |dish| %>
