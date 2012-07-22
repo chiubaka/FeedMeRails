@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     current_restaurant.menu = Menu.create(restaurant_id: current_restaurant.id) unless current_restaurant.menu
-    menu_path(current_restaurant.menu.id)
+    customers_path
   end
 end
