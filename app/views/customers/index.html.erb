@@ -1,26 +1,29 @@
-<h1>Listing customers</h1>
 
-<table>
-  <tr>
-    <th>Table number</th>
-    <th>Is active</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="row">
+	<div class="span8">
+		<center><h1 id="menu_title"><%= current_restaurant.name %>'s customers</h1></center>
+	</div>
+</div>
+
+
 <% if @customers %>
-<% @customers.each do |customer| %>
-  <tr>
-    <td><%= customer.table_id %></td>
-    <td><%= customer.is_active %></td>
-    <td><%= link_to 'Show', customer %></td>
-    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-    <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-<% end %>
-</table>
+  <% @customers.each do |customer| %>
+  <div class="row">
+	<div class="span8" id="menu_info">
+    	<div><center><p class="menu_content" id="name_of_dish"><%= customer.user.name %></p></center></div>   
+    </div>
+  </div>
+  <div class="row">
+	<div class="span4">
+	    <p><a href="#"><img src="<%= customer.user.profile_pic_url %>" class="food_image_for_menu" %></a></p> <!-- menu classes work here -->
+	</div>
+	<div class="span4">
+		<p class="menu_content"><%= customer.table_id %></p>   
+	</div>
+  </div>
 
-<br />
+  <% end %>
 
-<%= link_to 'New Customer', new_customer_path %>
+<% end %>
+
+
