@@ -11,7 +11,7 @@
 <% if @customers %>
 <% @customers.each do |customer| %>
   <tr>
-    <td><%= customer.table_number %></td>
+    <td><%= customer.table_id %></td>
     <td><%= customer.is_active %></td>
     <td><%= link_to 'Show', customer %></td>
     <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
