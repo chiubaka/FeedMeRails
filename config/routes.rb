@@ -3,7 +3,11 @@ FeedMeRails::Application.routes.draw do
 
   devise_for :restaurants
 
-  resources :ratings
+  resources :ratings do
+    collection do
+      post 'search'
+    end
+  end
 
   resources :dishes
 

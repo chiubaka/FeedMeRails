@@ -80,4 +80,19 @@ class RatingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+    restaurant = Restaurant.find(params[:restaurant_id])
+    menu = restaurant.menu
+    @ratings = []
+    menu.dishes.each do |dish|
+      dish.ratings.each do |rating|
+        @ratings.push(rating)
+      end
+    end
+
+    respond_to do |format|
+      format.json { render json: @ratings }
+    end
+  end
 end
