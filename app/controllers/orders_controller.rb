@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :create
   # GET /orders
   # GET /orders.json
   def index
@@ -40,7 +41,13 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(params[:order])
+    @order = Order.new
+    user_id = params[:user_id]
+    dish_ids = params[:order]
+    dish_ids.each do |id|
+      dish = Dish.find(id)
+      dish.order_id = @order.id
+    end     
 
     respond_to do |format|
       if @order.save
