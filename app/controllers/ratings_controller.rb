@@ -1,4 +1,5 @@
 class RatingsController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :search
   # GET /ratings
   # GET /ratings.json
   def index
@@ -41,9 +42,11 @@ class RatingsController < ApplicationController
   # POST /ratings.json
   def create
     @rating = Rating.new(params[:rating])
+    dish = Dish.find(params[:rating][:dish_id])    
 
     respond_to do |format|
       if @rating.save
+        dish.add_rating(@rating)
         format.html { redirect_to @rating, notice: 'Rating was successfully created.' }
         format.json { render json: @rating, status: :created, location: @rating }
       else
@@ -78,6 +81,21 @@ class RatingsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to ratings_url }
       format.json { head :no_content }
+    end
+  end
+
+  def search
+    restaurant = Restaurant.find(params[:restaurant_id])
+    menu = restaurant.menu
+    @ratings = []
+    menu.dishes.each do |dish|
+      dish.ratings.each do |rating|
+        @ratings.push(rating)
+      end
+    end
+
+    respond_to do |format|
+      format.json { render json: @ratings }
     end
   end
 end
