@@ -8,7 +8,4 @@ class Dish < ActiveRecord::Base
   has_attached_file :image, :default_url => "default.jpeg",
   :styles => { :small => "160x160" }
   
-  def add_rating(a_rating)  
-    a_rating.value == 1 ? upvotes += 1 : downvotes += 1
-  end
 end

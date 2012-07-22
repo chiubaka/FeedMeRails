@@ -46,10 +46,16 @@ class RatingsController < ApplicationController
     @user = User.find_by_facebook_id(facebook_id)
     @rating.user_id = @user.id
     dish = Dish.find(params[:rating][:dish_id])    
-
+    @rating.dish_id = dish.id   
+  
     respond_to do |format|
       if @rating.save
-        dish.add_rating(@rating)
+        if @rating.value == 1
+          dish.upvotes += 1
+        else
+          dish.downvotes += 1
+        end
+        dish.save
         format.html { redirect_to @rating, notice: 'Rating was successfully created.' }
         format.json { render json: @rating, status: :created, location: @rating }
       else
