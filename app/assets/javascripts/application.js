@@ -9,10 +9,18 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
-//
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree .
+//= require_tree
+$(document.ready(function() {
+  if ($("#customers").length > 0) {
+    setTimeout(updateCustomers, 5000);
+  }
+});
 
-
+function updateCustomers() {
+  var restaurant_id = $("#customers").attr("data-id");
+  $.getScript("/customers.js?restaurant_id=" + restaurant_id );
+  setTimeout(updateCustomers, 5000);
+}
