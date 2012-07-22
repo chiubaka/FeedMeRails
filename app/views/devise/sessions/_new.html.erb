@@ -1,0 +1,11 @@
+
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  
+<div><%= f.email_field :email, :placeholder => "Email", :class => "sign_in_partial" %>
+<%= f.password_field :password, :placeholder => "Password", :class => "sign_in_partial" %></div>
+
+<div><%= f.submit "Sign in", :class => "btn btn-large btn-primary" %></div>
+<% end %>
+
+
