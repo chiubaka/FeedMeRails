@@ -14,7 +14,7 @@
       </a>
  
       <!-- Site name -->
-      <%= link_to "Feed Me :)", root_path, :class => "brand"%>
+      <%= link_to "Feed Me :)", { :controller => "menus", :action => "show", :id => current_restaurant.id }, :class => "brand" %>
  
       <!-- Start of the nav bar content -->
       <div class="nav-collapse"><!-- Other nav bar content -->
