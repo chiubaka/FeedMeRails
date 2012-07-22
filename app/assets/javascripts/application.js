@@ -27,8 +27,4 @@ function updateCustomers() {
   setTimeout(updateCustomers, 5000);
 }
 
-$(".red").click(function() {
-  var customer_id = $(this).attr("customer-id");
-  $(this).removeClass("red");
-  $.getScript("/customers/" + customer_id + ".js");
-});
+$(".red td").click(function() { var customer_id = $(".red").attr("customer-id");$(".red").removeClass("red");$.getScript("/customers/" + customer_id + ".js" });
