@@ -90,5 +90,10 @@ class CustomersController < ApplicationController
     restaurant_id = params[:restaurant_id]
     @customer = Customer.find_by_user_id_and_restaurant_id_and_is_active(user.id, restaurant_id, true)
     @customer.is_flagged = true
+    @customer.save
+
+    respond_to do |format|
+      format.json { head :no_content }
+    end
   end
 end

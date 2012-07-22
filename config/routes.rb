@@ -16,6 +16,10 @@ FeedMeRails::Application.routes.draw do
   resources :menus
 
   resources :customers
+    collection do
+      post 'waiter'
+    end
+  end
 
   resources :restaurants
 
