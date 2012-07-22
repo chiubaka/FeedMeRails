@@ -15,7 +15,7 @@ FeedMeRails::Application.routes.draw do
 
   resources :menus
 
-  resources :customers
+  resources :customers do
     collection do
       post 'waiter'
     end
