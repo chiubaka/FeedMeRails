@@ -1,4 +1,5 @@
 class RatingsController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => :search
   # GET /ratings
   # GET /ratings.json
   def index
