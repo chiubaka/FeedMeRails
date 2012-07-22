@@ -57,7 +57,12 @@ class UsersController < ApplicationController
     
     respond_to do |format|
       if @user.save
-        Customer.create(user_id: @user.id, restaurant_id: restaurant.id, table_id: table_id, is_active: true)
+        customer = Customer.new
+        customer.is_active = true
+        customer.restaurant_id = restaurant.id
+        customer.table_id = table_id
+        customer.user_id = @user.id
+        customer.save
         format.html { redirect_to @user }
         format.json { render json: @dishes }
       else
