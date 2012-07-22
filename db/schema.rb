@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120722031254) do
+ActiveRecord::Schema.define(:version => 20120722034741) do
 
   create_table "customers", :force => true do |t|
     t.integer  "table_number"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20120722031254) do
     t.string   "name"
     t.decimal  "price"
     t.text     "description"
-    t.string   "image_url"
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
